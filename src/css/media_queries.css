@@ -1,0 +1,68 @@
+@media screen and (max-width: 575px) {
+    .location {
+        width: 40px;
+        border-radius: 50%;
+    }
+    
+    
+    .wind i {
+       font-size: 32px;
+    }
+
+    .aqi-content h3 {
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        margin: 20px;
+    }
+    
+    .nav-logo {
+        height: 25px;
+    }
+    
+    /* .card {
+        text-align: center;
+    } */
+    
+    
+}
+
+@media screen and (max-width: 991px) {
+    .search-wrapper {
+        width: 40px;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .card h1 {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    
+    .hero-section .row {
+        display: flex;
+    }
+    
+    .left {
+        flex-basis: 320px;
+        height: 100vh;
+    }
+    
+    .right {
+        flex: 1;
+        height: 100vh;
+        overflow: scroll;
+    }
+}

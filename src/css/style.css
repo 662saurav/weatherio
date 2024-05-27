@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #B5A1E5;
+    --on-primary: #100E17;
+    --background: #131214;
+    --on-background: #EAE6F2;
+    --surface: #1D1C1F;
+    --on-surface: #DDDAE5;
+    --outline: #7B7980;
+    --on-surface-variant-2: #B9B6BF;
+    --outline: #3E3D40;
+    --bg-aqi-1: #89E589;
+    --on-bg-aqi-1: #1F331F;
+    --bg-aqi-2: #E5DD89;
+    --on-bg-aqi-2: #33311F;
+    --bg-aqi-3: #E5C089;
+    --on-bg-aqi-3: #332B1F;
+    --bg-aqi-4: #E58989;
+    --on-bg-aqi-4: #331F1F;
+    --bg-aqi-5: #E589B7;
+    --on-bg-aqi-5: #331F29;
+    --white: hsl(0, 0%, 100%);
+    --white-alpha-4: hsla(0, 0%, 100%, 0.04);
+    --white-alpha-8: hsla(0, 0%, 100%, 0.08);
+    --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+
+    --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
+    --gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
+
+    --ff-nunito-sans: 'Nunito Sans', sans-serif;
+
+    --heading: 5.6rem;
+    --title-1: 2rem;
+    --title-2: 1.8rem;
+    --title-3: 1.6rem;
+    --body-1: 2.2rem;
+    --body-2: 2rem;
+    --body-3: 1.6rem;
+    --label-1: 1.4rem;
+    --label-2: 1.2rem;
+
+    --weight-regular: 400;
+    --weight-semiBold: 600;
+
+    --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
+    --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
+
+    --radius-28: 28px;
+    --radius-16: 16px;
+    --radius-pill: 500px;
+    --radius-circle: 50%;
+
+    --transition-short: 100ms ease;
+}
+
+/* Google fonts */
+
+.nunito-sans {
+    font-family: "Nunito Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-outlined {
+    font-size: 36px;
+}
+
+sub {
+    vertical-align: baseline;
+    font-size: smaller;
+}
+
+
+body {
+    background-color: var(--background);
+    /* min-width: 320px; */
+}
+
+.wrapper {
+    margin: 30px 5px;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;  
+    color: #000;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.tophead .row {
+    height: 40px;
+}
+
+.nav-logo {
+    height: 30px;
+}
+
+.search-wrapper {
+    background-color: var(--surface);
+}
+
+.search-wrapper button,
+.search-wrapper input {
+    background: transparent;
+    border: none;
+    height: 100%;
+    color: #fff;
+}
+
+.search-wrapper input:focus {
+    outline: none;
+}
+
+.location {
+    background-color: var(--primary);
+    width: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3px;
+}
+
+/* hero-section */
+
+.card {
+    background-color: var(--surface);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card h1 {
+    font-size: 4rem;
+}
+
+.weather-img {
+    height: 70px;
+}
+
+.card-text-2 {
+    border-top: 1px solid var(--outline);
+    padding-top: 10px;
+}
+
+.card-text-2 span {
+    color: gray;
+    font-weight: 600;
+}
+
+
+#left-card2 img {
+    width: 36px;
+    height: 36px;
+}
+
+#left-card2 ul {
+    padding: 0;
+}
+
+#left-card2 p {
+    margin: 0;
+}
+
+#left-card2 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: gray;
+}
+
+/* right pane */
+
+
+
+.highlights p {
+    color: gray;
+    font-weight: 600;
+}
+
+.highlights-box {
+    background-color: var(--black-alpha-10);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.remark {
+    background-color: var(--bg-aqi-1);
+    border-radius: 10px;
+    color: #000;
+    padding: 0 10px;
+}
+
+.wind i {
+    font-size: 36px;
+}
+
+/* Today section */
+
+.today {
+    overflow-x: scroll;
+}
+
+.today-cards {
+    display: flex;
+    gap: 16px;
+}
+
+.today-cards .card {
+    min-width: 120px;
+    height: 160px;
+    text-align: center;
+}
+
+.today-cards img {
+    width: 50px;
+    height: 50px;
+}
+
+.today-cards img, .today-cards p {
+    margin: auto;
+}
+
+
+
