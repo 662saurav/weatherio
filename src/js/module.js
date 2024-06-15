@@ -1,6 +1,6 @@
 'use strict';
 
-export const weekNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export const weekNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 export const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
  
 export const getDate = (unixTime, timezone) => {
@@ -20,9 +20,14 @@ export const getTime = (unixTime, timezone) => {
     return `${hours % 12 || 12}:${minutes} ${meridian}`;
 }
 
-console.log(getDate(1716894485, 19800));
-console.log(getTime(1716894485, 19800));
+export const currentLocation = function() {
+    window.navigator.geolocation.getCurrentPosition(res=> {
+        const {latitude, longitude} = res.coords;
+        return `${latitude} ${longitude}`;  
+    });
+}
 
+export const capital = (string) => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 export const aqiText = {
     1: {
         level: "Good",
@@ -49,3 +54,5 @@ export const aqiText = {
         message: "Health warnings of emergency conditions. The entire population is more likely to be affected."
     }
 }
+
+
