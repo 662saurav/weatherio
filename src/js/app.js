@@ -130,6 +130,7 @@ input.addEventListener("keypress", function (e) {
     }
 });
 
+
 btn.addEventListener("click", function (e) {
     input.classList.remove("d-none");
     getWeather(input.value);
@@ -137,9 +138,14 @@ btn.addEventListener("click", function (e) {
 
 window.navigator.geolocation.getCurrentPosition(res => {
     let { latitude, longitude } = res.coords;
-    curr_location.addEventListener("click", async function (e) {
+
+    let mylocation = async () => {
         const geoReverse = await fetchData(url.geoReverse(latitude, longitude));
         const [{ name }] = geoReverse;
         getWeather(name);
-    });
+    }
+
+    ["click", "touchstart"].forEach((event) => {
+        curr_location.addEventListener(event, mylocation);
+     });
 });

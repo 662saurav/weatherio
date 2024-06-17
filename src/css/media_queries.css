@@ -52,7 +52,7 @@
     .search-wrapper input {
         border-radius: 12px;
         background-color: var(--surface);
-        transform: translateX(-230px);
+        transform: translateX(-240px);
         position: absolute;
         z-index: 1;
         height: 40px;
