@@ -21,6 +21,10 @@ export const url = {
 
     geoCoding(query) {
         return `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&units=metric`;
+    },
+
+    geoReverse(lat, lon) {
+        return `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5`;
     }
 }
 

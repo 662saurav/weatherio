@@ -55,14 +55,14 @@
                         <div class="col-8">
                             <div class="row justify-content-lg-between justify-content-end">
                                 <div class="search-wrapper col-md-6 col-2 h-100 rounded-pill">
-                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <input type="text" placeholder="Search" class="d-none d-lg-inline-block ps-2">
+                                    <button type="submit" id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <input type="text" placeholder="Search" id="searchBox" class="d-none d-lg-inline-block ps-2">
                                 </div>
 
                                 <a class="col-md-4 col-6 location rounded-pill h-100" href="#">
                                     <i class="fa-solid fa-location-crosshairs"></i>
-                                    <span class="fw-semibold d-none d-sm-block">Current Location</span>
-                                </a>
+                                    <span class="fw-semibold d-none d-sm-block" id="curr_location">Current Location</span>
+                                </a>    
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                                             <div class="highlights-box">
                                                 <div class="card-body">
                                                     <div class="d-flex justify-content-between mb-4">
-                                                        <p class="m-0">Air Quality Index</p>
+                                                        <p class="m-0">Air Quality Index (μg/m<sup>3</sup>)</p>
                                                         <div class="remark">Good</div>
                                                     </div>
 
@@ -182,9 +182,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -206,7 +203,7 @@
 
                                                                 <div class="col-9">
                                                                     <p>Sunrise</p>
-                                                                    <h3>6:46 AM</h3>
+                                                                    <h3 id="sunrise">6:46 AM</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -220,7 +217,7 @@
 
                                                                 <div class="col-9">
                                                                     <p>Sunset</p>
-                                                                    <h3>5:39 PM</h3>
+                                                                    <h3 id="sunset">5:39 PM</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -243,7 +240,7 @@
                                                             class="material-symbols-outlined">humidity_percentage</span>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h3>82<span class="fs-5">%</span></h3>
+                                                        <h3 id="humidity">82<span class="fs-5">%</span></h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -256,7 +253,7 @@
                                                         <span class="material-symbols-outlined">airwave</span>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h3>1025<span class="fs-5">hPa</span></h3>
+                                                        <h3 id="pressure">1025<span class="fs-5">hPa</span></h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -272,7 +269,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h3>10<span class="fs-5">km</span></h3>
+                                                        <h3 id="visibility">10<span class="fs-5">km</span></h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,7 +284,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h3>2<sup class="fs-6">°C</sup></h3>
+                                                        <h3 id="feels_like">2<sup class="fs-6">°C</sup></h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -299,7 +296,7 @@
                             <p class="text-white fw-semibold my-3">Today at</p>
 
                             <div class="today">
-                                <div class="today-cards">
+                                <div class="today-cards line1">
                                     <div class="card">
                                         <p>9 PM</p>
                                         <img src="/src/images/weather_icons/04n.png">
@@ -343,8 +340,7 @@
                                     </div>
 
                                 </div>
-                                <div class="today-cards mt-3">
-
+                                <div class="today-cards line2 mt-3">
                                     <div class="card">
                                         <p>9 PM</p>
                                         <img src="/src/images/weather_icons/direction.png">
@@ -394,7 +390,7 @@
                                 <span class="text-dark-emphasis">Powered by </span> <img
                                     src="/src/images/openweather.png">
                             </div>
-
+                            
                         </div>
 
                     </div>
