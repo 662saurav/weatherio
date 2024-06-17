@@ -16,6 +16,12 @@
     .card h1 {
         font-size: 2.25rem;
     }
+
+    .search-wrapper input {
+        transform: translateY(40px);
+    }
+
+
     
 }
 
@@ -33,6 +39,7 @@
     } */
     
     
+    
 }
 
 @media screen and (max-width: 991px) {
@@ -41,7 +48,17 @@
         border-radius: 50%;
         margin: 0 10px;
     }
+
+    .search-wrapper input {
+        border-radius: 12px;
+        background-color: var(--surface);
+        transform: translateX(-230px);
+        position: absolute;
+        z-index: 1;
+        height: 40px;
+    }
     
+
 }
 
 

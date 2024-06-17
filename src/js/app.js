@@ -3,7 +3,8 @@
 import { fetchData, url } from './api.js';
 import { weekNames, monthNames, getDate, getTime, capital, aqiText, kmph } from './module.js';
 
-let input = document.getElementById("searchBox");
+let input = document.querySelector("input");
+let smSearch = document.getElementById("smSearch");
 let btn = document.getElementById("btn");
 let curr_location = document.getElementById("curr_location");
 let degree = document.querySelector(".card-text-1 h1");
@@ -121,6 +122,8 @@ async function getWeather(query) {
     remark.style.background = `${color}`;
 }
 
+
+
 input.addEventListener("keypress", function (e) {
     if (e.key == 'Enter') {
         getWeather(input.value);
@@ -128,6 +131,7 @@ input.addEventListener("keypress", function (e) {
 });
 
 btn.addEventListener("click", function (e) {
+    input.classList.remove("d-none");
     getWeather(input.value);
 });
 
