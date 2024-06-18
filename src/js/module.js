@@ -8,7 +8,7 @@ export const getDate = (unixTime, timezone) => {
     let day = weekNames[date.getUTCDay()];
     let month = monthNames[date.getUTCMonth()];
 
-    return `${day} ${date.getDate()}, ${month}`;
+    return `${day} ${date.getUTCDate()}, ${month}`;
 }
 
 export const getTime = (unixTime, timezone) => {

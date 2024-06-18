@@ -28,6 +28,8 @@ async function getWeather(query) {
     // Geographical latitude and longitude
     const geoCoding = await fetchData(url.geoCoding(query));
     const [{ lat, lon }] = geoCoding;
+    console.log(lat);
+    console.log(lon);
 
     const [currentWeather, forecast, airPollution] = await Promise.all([
         fetchData(url.currentWeather(lat, lon)),
@@ -91,6 +93,7 @@ async function getWeather(query) {
     for (let i = 0, j = 7; i < 5; i++, j += 8) {
         const {
             weather: for_Weather,
+            dt,
             dt_txt
         } = for_list[j];
         const [{ icon: for_icon }] = for_Weather;
@@ -98,8 +101,9 @@ async function getWeather(query) {
         let fiveDay = document.querySelectorAll("#left-card2 li")[i];
 
         let date = new Date(dt_txt);
+
         fiveDay.querySelector("img").src = `/src/images/weather_icons/${for_icon}.png`;
-        fiveDay.querySelectorAll("p")[0].innerHTML = `${date.getUTCDate()} ${monthNames[date.getUTCMonth()]}`;
+        fiveDay.querySelectorAll("p")[0].innerHTML = `${date.getDate()} ${monthNames[date.getUTCMonth()]}`;
         fiveDay.querySelectorAll("p")[1].innerHTML = `${weekNames[date.getUTCDay()]}`;
     }
 
